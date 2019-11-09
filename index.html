@@ -2,39 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <link rel="stylesheet" href="style.css"></link>
     <script defer src="main.js"></script>
     <title>Document</title>
 </head>
 <body>
     <main>
-        <form action="auth">
+        <form action class="auth">
             <fieldset>
                 <legend>Авторизация</legend>
                 <div class="auth__row">
-                    <label for="useremail">User Name</label>
-                    <input type="text" id="userName">
+                    <label for class="useremail">User Name</label>
+                    <input class="auth__text"  type="text" id="userName"></input>
+
+                    <i class="auth__erorr">  Don't contain -,*,{},$.0-9  length > 5 chars </i>
                 </div>
                 <div class="auth__row">
                         <label for="useremail">User email</label>
-                        <input type="text" id="useremail">
+                        <input class="auth__text" type="text" id="useremail"></input>
                     </div>
                  <div class="auth__row">
                             <label for="userpass">User password</label>
-                            <input type="text" id="userpass">
+                            <input class="auth__text" type="text" id="userpass"></input>
                 </div>
-                <div class="auth__check">
-                        <label>
+                    <label class="auth__check">
+                        
                             Subcsrite
-                        <input type="checkbox" id="usersubcsrite">
+                        <input   type="checkbox" id="usersubcsrite"></input>
                     </label> 
-    
+
+                    <div class="auth__row">
+                    <button class="auth__btn"> Login</button>
                     </div>
-                    <button>Login</button>
+                </div>
             </fieldset>
         </form>
     </main>
-    <h1>FORM</h1>
+    
 </body>
 </html>
