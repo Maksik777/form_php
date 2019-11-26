@@ -1,24 +1,77 @@
 <?php
 
-    $a=5;
 
-    $result ="hello {$a} world";
+    $result = $_SERVER['REQUEST_URT'];
+    $method = $_c['REQUEST_METHOD'];
 
-    var_dump($result);
-    ?>
+    echo '<pre>';
+        var_dump($_SERVER);
+    echo '</pre>';
+     die;
+{
 
-    <?php
-    $user = [
-        "name" => "vasa",
-        "age" => 25,
-        "email" => "vasa@gmail.com"
+
+
+     if($mrthod === 'GET'){
+         include './views/header.php';
+
+     }
+   include './views/header.php';
+
+   if($route === '/'){
+    include'/views/home.php';
+}
+
+    if($route === '/'){
+     include'/views/home.php';
+}
+
+
+
+    if($route === '/login'&& $method === 'GET'){
+        include'/views/login.php';
+    } 
+
     
-    ];
-    var_dump($user);
-    ?>
-    if(!(/))
-userNameError.classList.remove('auth_')
-    <?php foreach ($user as $key => $val) {?>
-    <li><$val</li>}
+    include './views/footer.php';
+}
 
-    public
+footer
+
+
+if ($method === 'POST') {
+
+    if ($route === '/login') {
+        $request = json_decode(file_get_contents('php://input'), true);
+
+        valid($request);
+
+        echo 'hello';
+    }
+}
+    
+    function valid($data) 
+    {
+        $errors = [];
+
+        if(!preg_match(/^[0-9a-z.\-_]{1,15}@[0-9a-z.\-_]{1,14}\.[a-z]{1,}$/i, $data['name'])) {
+            $errors['name'] ='name is not valid';
+        }
+        if(!preg_match(/^[0-9a-z.\-_]{1,15}@[0-9a-z.\-_]{1,14}\.[a-z]{1,}$/i)) {
+            $errors['email'] = 'email is not  valid';
+        }
+        if(!preg_match(/^[0-9a-z.\-_]{1,15}@[0-9a-z.\-_]{1,14}\.[a-z]{1,}$/i)) {
+            $errors['phone'] = 'phone is not valid' ;
+        }if(!preg_match(/^[0-9a-z.\-_]{1,15}@[0-9a-z.\-_]{1,14}\.[a-z]{1,}$/i)) {
+            $errors['password'] = 'password is not valid' ;
+        }
+       
+    }
+    
+//var_dump($data);
+
+if (gettype($data['subscribe']) ==== 'boolean') {
+    echo '---------subscribe valid';
+}
+
+ 
